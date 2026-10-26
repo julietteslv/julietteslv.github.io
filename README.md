@@ -1,2 +1,0 @@
-# julietteslv.github.io
-portfolio
