@@ -1,86 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Title One — Juliette</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #fafafa;
-            color: #222;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-        }
-        .back-btn {
-            display: inline-block;
-            margin-bottom: 25px;
-            color: #555;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .back-btn:hover {
-            color: #000;
-        }
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 8px;
-        }
-        .meta {
-            color: #777;
-            font-size: 0.95rem;
-            margin-bottom: 25px;
-        }
-        .description {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: #444;
-            margin-bottom: 40px;
-        }
-        .image-gallery {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-        .image-gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-    </style>
-</head>
-<body>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Project Title One — Juliette</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Styling specifically for individual project pages */
+			body {
+				background-color: #1e1e1e;
+				color: #ddd;
+				font-family: inherit;
+				padding: 40px 20px;
+			}
+			.project-container {
+				max-width: 900px;
+				margin: 0 auto;
+				background: #252525;
+				padding: 40px;
+				border-radius: 8px;
+				box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+			}
+			.back-link {
+				display: inline-block;
+				margin-bottom: 25px;
+				color: #fff;
+				text-decoration: none;
+				font-size: 0.9rem;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				border-bottom: 1px solid rgba(255,255,255,0.3);
+				padding-bottom: 4px;
+			}
+			.back-link:hover {
+				color: #4ac;
+				border-color: #4ac;
+			}
+			.project-title {
+				font-size: 2.2rem;
+				color: #fff;
+				margin-bottom: 10px;
+			}
+			.project-meta {
+				color: #888;
+				font-size: 0.95rem;
+				margin-bottom: 30px;
+			}
+			.project-description {
+				line-height: 1.8;
+				font-size: 1.05rem;
+				margin-bottom: 40px;
+				color: #ccc;
+			}
+			.project-gallery {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+			}
+			.project-gallery img {
+				width: 100%;
+				height: auto;
+				border-radius: 6px;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+			}
+		</style>
+	</head>
+	<body>
 
-    <div class="container">
-        <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
+		<div class="project-container">
+			<a href="index.html" class="back-link">← Back to Portfolio</a>
+			
+			<h1 class="project-title">Project Title One</h1>
+			<div class="project-meta">Acrylic on Canvas • 2026</div>
 
-        <h1>Project Title One</h1>
-        <div class="meta">Oil on Canvas • 2026 • 24" x 36"</div>
+			<div class="project-description">
+				<p>Write your detailed story or statement about this artwork here. You can discuss your inspiration, the techniques or mediums used, the size of the piece, or the theme behind it.</p>
+			</div>
 
-        <div class="description">
-            <p>Write your detailed story or description of the artwork here! You can explain the concept, inspiration, color palette choices, techniques used, or any story behind the creation of this piece.</p>
-        </div>
+			<div class="project-gallery">
+				<!-- Add as many photos of this project as you like below -->
+				<img src="images/fulls/01.jpg" alt="Project Image 1" />
+				<!-- You can add secondary images like close-ups or process shots: -->
+				<!-- <img src="images/fulls/02.jpg" alt="Detail Shot" /> -->
+			</div>
+		</div>
 
-        <div class="image-gallery">
-            <!-- Full view -->
-            <img src="images/fulls/01.jpg" alt="Artwork Main View">
-            <!-- Close up 1 -->
-            <img src="images/fulls/02.jpg" alt="Artwork Detail 1">
-            <!-- Close up 2 -->
-            <img src="images/fulls/03.jpg" alt="Artwork Detail 2">
-        </div>
-
-        <br><br>
-        <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
-    </div>
-
-</body>
+	</body>
 </html>
