@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		
-		<!-- Horizontal Gallery Fix -->
+		<!-- Guaranteed Horizontal Scroll & Image Fix -->
 		<style>
 			#main {
 				display: flex !important;
@@ -16,21 +16,36 @@
 				overflow-x: auto !important;
 				overflow-y: hidden !important;
 				-webkit-overflow-scrolling: touch;
-				padding: 2em 1em;
-				gap: 1.5em;
-				white-space: nowrap;
+				padding: 40px 20px !important;
+				gap: 30px !important;
+				box-sizing: border-box;
 			}
 			#main .thumb {
-				flex: 0 0 auto !important;
+				flex: 0 0 320px !important;
+				width: 320px !important;
 				display: inline-block !important;
 				margin: 0 !important;
+				background: #ffffff;
+				padding: 15px;
+				border-radius: 8px;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 			}
 			#main .thumb img {
-				display: block;
-				height: 280px;
-				width: auto;
+				display: block !important;
+				width: 100% !important;
+				height: 220px !important;
+				object-fit: cover !important;
 				border-radius: 4px;
-				object-fit: cover;
+			}
+			#main .thumb h2 {
+				font-size: 1.1rem !important;
+				margin-top: 15px !important;
+				margin-bottom: 5px !important;
+				color: #333 !important;
+			}
+			#main .thumb p {
+				font-size: 0.85rem !important;
+				color: #777 !important;
 			}
 		</style>
 	</head>
@@ -58,7 +73,7 @@
 							<img src="images/thumbs/01.jpg" alt="Project 1" />
 						</a>
 						<h2>Project Title One</h2>
-						<p>Click to view full project details and gallery.</p>
+						<p>Click to view project details & gallery.</p>
 					</article>
 
 					<!-- Project 2 -->
@@ -67,7 +82,7 @@
 							<img src="images/thumbs/02.jpg" alt="Project 2" />
 						</a>
 						<h2>Project Title Two</h2>
-						<p>Click to view full project details and gallery.</p>
+						<p>Click to view project details & gallery.</p>
 					</article>
 
 					<!-- Project 3 -->
@@ -76,16 +91,16 @@
 							<img src="images/thumbs/03.jpg" alt="Project 3" />
 						</a>
 						<h2>Project Title Three</h2>
-						<p>Click to view full project details and gallery.</p>
+						<p>Click to view project details & gallery.</p>
 					</article>
 
-					<!-- Project 4 (Duplicate for demonstration of horizontal scrolling) -->
+					<!-- Project 4 -->
 					<article class="thumb">
 						<a href="project1.html">
 							<img src="images/thumbs/01.jpg" alt="Project 4" />
 						</a>
 						<h2>Project Title Four</h2>
-						<p>Click to view full project details and gallery.</p>
+						<p>Click to view project details & gallery.</p>
 					</article>
 
 				</section>
