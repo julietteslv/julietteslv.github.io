@@ -7,45 +7,107 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		
-		<!-- Guaranteed Horizontal Scroll & Image Fix -->
 		<style>
+			/* Force the portfolio into a stunning horizontal layout on all screens */
+			body {
+				background-color: #2b2b2b;
+				color: #fff;
+				overflow-x: hidden;
+			}
+			#wrapper {
+				display: flex;
+				flex-direction: row;
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden;
+			}
+			#header {
+				flex: 0 0 350px;
+				height: 100vh;
+				background: rgba(30, 30, 30, 0.95);
+				padding: 40px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+				z-index: 10;
+			}
 			#main {
-				display: flex !important;
-				flex-direction: row !important;
-				flex-wrap: nowrap !important;
-				overflow-x: auto !important;
-				overflow-y: hidden !important;
+				flex: 1;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				overflow-x: auto;
+				overflow-y: hidden;
+				height: 100vh;
+				padding: 60px 40px;
+				gap: 40px;
+				align-items: center;
 				-webkit-overflow-scrolling: touch;
-				padding: 40px 20px !important;
-				gap: 30px !important;
-				box-sizing: border-box;
 			}
-			#main .thumb {
-				flex: 0 0 320px !important;
-				width: 320px !important;
-				display: inline-block !important;
-				margin: 0 !important;
-				background: #ffffff;
-				padding: 15px;
+			.thumb {
+				flex: 0 0 340px;
+				height: 450px;
+				background: #1a1a1a;
 				border-radius: 8px;
-				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+				overflow: hidden;
+				box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+				display: flex;
+				flex-direction: column;
+				transition: transform 0.3s ease;
 			}
-			#main .thumb img {
-				display: block !important;
-				width: 100% !important;
-				height: 220px !important;
-				object-fit: cover !important;
-				border-radius: 4px;
+			.thumb:hover {
+				transform: translateY(-8px);
 			}
-			#main .thumb h2 {
-				font-size: 1.1rem !important;
-				margin-top: 15px !important;
-				margin-bottom: 5px !important;
-				color: #333 !important;
+			.thumb a.image {
+				display: block;
+				height: 320px;
+				overflow: hidden;
 			}
-			#main .thumb p {
-				font-size: 0.85rem !important;
-				color: #777 !important;
+			.thumb img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+			.thumb h2 {
+				font-size: 1.1rem;
+				margin: 15px 15px 5px 15px;
+				color: #fff;
+			}
+			.thumb p {
+				font-size: 0.85rem;
+				margin: 0 15px 15px 15px;
+				color: #aaa;
+			}
+			#footer {
+				flex: 0 0 400px;
+				height: 100vh;
+				background: rgba(25, 25, 25, 0.95);
+				padding: 60px 40px;
+				overflow-y: auto;
+				z-index: 10;
+			}
+			#footer h2 {
+				font-size: 1.4rem;
+				margin-bottom: 15px;
+				color: #fff;
+			}
+			#footer p {
+				color: #bbb;
+				line-height: 1.6;
+				margin-bottom: 30px;
+			}
+			#footer ul.icons {
+				list-style: none;
+				padding: 0;
+			}
+			#footer ul.icons li {
+				margin-bottom: 10px;
+			}
+			#footer ul.icons a {
+				color: #fff;
+				text-decoration: none;
 			}
 		</style>
 	</head>
@@ -60,7 +122,7 @@
 						<p>Visual Artist &amp; Illustrator</p>
 					</header>
 					<footer>
-						<a href="#footer" class="button style2 down-light">About Me</a>
+						<a href="#footer" class="button style2 down-light" style="color: #fff; text-decoration: none; border: 1px solid rgba(255,255,255,0.3); padding: 10px 20px; border-radius: 4px; display: inline-block;">About Me</a>
 					</footer>
 				</section>
 
@@ -69,38 +131,29 @@
 
 					<!-- Project 1 -->
 					<article class="thumb">
-						<a href="project1.html">
+						<a href="project1.html" class="image">
 							<img src="images/thumbs/01.jpg" alt="Project 1" />
 						</a>
 						<h2>Project Title One</h2>
-						<p>Click to view project details & gallery.</p>
+						<p>Click to view full project details & gallery.</p>
 					</article>
 
 					<!-- Project 2 -->
 					<article class="thumb">
-						<a href="project2.html">
+						<a href="project2.html" class="image">
 							<img src="images/thumbs/02.jpg" alt="Project 2" />
 						</a>
 						<h2>Project Title Two</h2>
-						<p>Click to view project details & gallery.</p>
+						<p>Click to view full project details & gallery.</p>
 					</article>
 
 					<!-- Project 3 -->
 					<article class="thumb">
-						<a href="project3.html">
+						<a href="project3.html" class="image">
 							<img src="images/thumbs/03.jpg" alt="Project 3" />
 						</a>
 						<h2>Project Title Three</h2>
-						<p>Click to view project details & gallery.</p>
-					</article>
-
-					<!-- Project 4 -->
-					<article class="thumb">
-						<a href="project1.html">
-							<img src="images/thumbs/01.jpg" alt="Project 4" />
-						</a>
-						<h2>Project Title Four</h2>
-						<p>Click to view project details & gallery.</p>
+						<p>Click to view full project details & gallery.</p>
 					</article>
 
 				</section>
@@ -109,24 +162,18 @@
 				<section id="footer">
 					<section>
 						<h2>About The Artist</h2>
-						<p>Welcome! Here you can write a short artist statement or bio telling visitors about your background and creative process.</p>
+						<p>Welcome! Here you can write a short artist statement or bio telling visitors about your background, mediums, and creative process.</p>
 					</section>
 					<section>
 						<h2>Get in Touch</h2>
 						<ul class="icons">
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="#">Instagram</a></li>
+							<li><a href="#">Email</a></li>
 						</ul>
 					</section>
 				</section>
 
 		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
 
 	</body>
 </html>
