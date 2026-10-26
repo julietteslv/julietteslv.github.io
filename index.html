@@ -1,83 +1,153 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>My Art Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juliette — Art Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fafafa;
+            color: #222;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+        }
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        header p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 60px auto;
+        }
+        .art-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .art-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .art-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+        }
+        .art-info {
+            padding: 20px;
+            text-align: center;
+        }
+        .art-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+        .art-subtitle {
+            font-size: 0.9rem;
+            color: #888;
+        }
+        footer {
+            border-top: 1px solid #eaeaea;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 40px;
+            text-align: center;
+        }
+        footer h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        footer p {
+            color: #666;
+            max-width: 500px;
+            margin: 0 auto 20px auto;
+            line-height: 1.6;
+        }
+        .social-links a {
+            color: #222;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0 10px;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 
-		<div id="wrapper">
+    <header>
+        <h1>Juliette</h1>
+        <p>Visual Artist & Illustrator — Welcome to my portfolio</p>
+    </header>
 
-			<!-- Header -->
-				<section id="header">
-					<header>
-						<h1>Juliette</h1>
-						<p>Visual Artist & Portfolio</p>
-					</header>
-					<footer>
-						<a href="#footer" class="button style2 down-light">About Me</a>
-					</footer>
-				</section>
+    <div class="gallery">
 
-			<!-- Gallery Items linked to dedicated project pages -->
-				<section id="main">
+        <!-- Project 1 -->
+        <a href="project1.html" class="art-card">
+            <img src="images/thumbs/01.jpg" alt="Project 1">
+            <div class="art-info">
+                <div class="art-title">Project Title One</div>
+                <div class="art-subtitle">Click to view project details & gallery &rarr;</div>
+            </div>
+        </a>
 
-					<!-- Project 1 -->
-					<article class="thumb">
-						<a href="project1.html" class="image">
-							<img src="images/thumbs/01.jpg" alt="Project 1 Thumbnail" />
-						</a>
-						<h2>Project Title One</h2>
-						<p>Click to view full project details and gallery.</p>
-					</article>
+        <!-- Project 2 -->
+        <a href="project2.html" class="art-card">
+            <img src="images/thumbs/02.jpg" alt="Project 2">
+            <div class="art-info">
+                <div class="art-title">Project Title Two</div>
+                <div class="art-subtitle">Click to view project details & gallery &rarr;</div>
+            </div>
+        </a>
 
-					<!-- Project 2 -->
-					<article class="thumb">
-						<a href="project2.html" class="image">
-							<img src="images/thumbs/02.jpg" alt="Project 2 Thumbnail" />
-						</a>
-						<h2>Project Title Two</h2>
-						<p>Click to view full project details and gallery.</p>
-					</article>
+        <!-- Project 3 -->
+        <a href="project3.html" class="art-card">
+            <img src="images/thumbs/03.jpg" alt="Project 3">
+            <div class="art-info">
+                <div class="art-title">Project Title Three</div>
+                <div class="art-subtitle">Click to view project details & gallery &rarr;</div>
+            </div>
+        </a>
 
-					<!-- Project 3 -->
-					<article class="thumb">
-						<a href="project3.html" class="image">
-							<img src="images/thumbs/03.jpg" alt="Project 3 Thumbnail" />
-						</a>
-						<h2>Project Title Three</h2>
-						<p>Click to view full project details and gallery.</p>
-					</article>
+    </div>
 
-				</section>
+    <footer>
+        <h2>About The Artist</h2>
+        <p>Welcome! Here you can write a short artist statement or bio telling visitors about your background, mediums, and creative process.</p>
+        <div class="social-links">
+            <a href="#">Instagram</a> • 
+            <a href="#">Email</a>
+        </div>
+    </footer>
 
-			<!-- Footer / About Section -->
-				<section id="footer">
-					<section>
-						<h2>About The Artist</h2>
-						<p>Welcome! Here you can write a short artist statement or bio telling visitors about your background and creative process.</p>
-					</section>
-					<section>
-						<h2>Get in Touch</h2>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-					</section>
-				</section>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
