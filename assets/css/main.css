@@ -842,3 +842,20 @@ input, select, textarea {
     object-fit: cover !important; /* Automatically crops/fits any image ratio */
     object-position: center !important;
 }
+/* --- Dynamic Background Image Blur & Dark Overlay --- */
+#bg {
+    position: fixed !important;
+    top: -10% !important;
+    left: -10% !important;
+    width: 120% !important;
+    height: 120% !important;
+    z-index: -1 !important;
+    filter: blur(20px) brightness(0.6) !important; /* Adjust blur (px) and dark overlay brightness (0.1 to 1.0) */
+    -webkit-filter: blur(20px) brightness(0.6) !important; /* Safari / Tablet support */
+}
+
+/* Fallback blur applied directly to the body overlay */
+body:before {
+    filter: blur(15px) !important;
+    -webkit-filter: blur(15px) !important;
+}
