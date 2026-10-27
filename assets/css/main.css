@@ -844,3 +844,18 @@ input, select, textarea {
     object-fit: cover !important; /* Automatically crops/fits any image ratio */
     object-position: center !important;
 }
+/* --- Custom Polish: Soft Borders & Perfect Image Alignment --- */
+
+/* 1. Make the card outlines/borders less opaque and blend into the background */
+#main article {
+    border-color: rgba(255, 255, 255, 0.08) !important; /* Lowers border opacity */
+    box-shadow: none !important;
+}
+
+/* 2. Ensure images fit their container boxes cleanly with the template's layout */
+#main article img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
