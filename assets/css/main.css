@@ -829,6 +829,7 @@ input, select, textarea {
 				.poptrox-popup .nav-previous {
 					display: none !important;
 				}
+			
 /* --- Custom Portfolio: Larger Cards & Extended Horizontal Scroll --- */
 #main article.thumb {
     height: 320px !important; /* Increases the card height */
