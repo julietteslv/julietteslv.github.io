@@ -6,6 +6,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<!-- Fix image size while keeping horizontal scroll intact -->
+		<style>
+			#main .thumb img {
+				width: auto !important;
+				max-height: 250px !important;
+				object-fit: contain !important;
+			}
+		</style>
+		<!-- Auto-resize and crop images to fit thumbnail boxes automatically -->
+		<style>
+			#main .thumbnails article {
+				height: 240px !important;
+				overflow: hidden !important;
+			}
+			#main .thumbnails article img {
+				width: 100% !important;
+				height: 100% !important;
+				object-fit: cover !important;
+				object-position: center !important;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
