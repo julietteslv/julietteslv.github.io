@@ -845,3 +845,14 @@ input, select, textarea {
     width: auto !important;
     height: auto !important;
 }
+			/* --- Custom Background Blur & Overlay --- */
+#bg {
+    opacity: 0.4 !important; /* Adjust transparency (0.0 to 1.0) to make it more or less visible */
+    filter: blur(15px) !important; /* Controls how blurry the background image appears */
+    transform: scale(1.1); /* Prevents white edges from showing during the blur */
+}
+
+/* Ensure the dark theme overlay keeps your text crisp and readable */
+#bg:before {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
