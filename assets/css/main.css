@@ -842,3 +842,16 @@ input, select, textarea {
     object-fit: cover !important; /* Automatically crops/fits any image ratio */
     object-position: center !important;
 }
+			/* --- Uniform Card Sizing & Extended Horizontal Scroll --- */
+#main article {
+    height: 320px !important;       /* Forces a uniform card height */
+    min-width: 420px !important;    /* Forces a uniform card width for a longer scroll */
+    overflow: hidden !important;
+}
+
+#main article img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;   /* Crops and fits your uploaded photos perfectly */
+    object-position: center !important;
+}
