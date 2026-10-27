@@ -831,3 +831,20 @@ input, select, textarea {
 				}
 
 		}
+/* --- Custom Portfolio: Larger Thumbnails & Extended Horizontal Scroll --- */
+#main .thumbnails {
+    height: 100vh; /* Keeps the row alignment locked to the viewport height */
+}
+
+#main .thumbnails article {
+    height: 60vh !important; /* Increases the height of every thumbnail box */
+    min-width: 400px !important; /* Makes each card wider so your scrolling distance increases */
+    overflow: hidden !important;
+}
+
+#main .thumbnails article img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Automatically crops/fits any image ratio cleanly */
+    object-position: center !important;
+}
