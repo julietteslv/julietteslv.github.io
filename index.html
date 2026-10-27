@@ -6,6 +6,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Control image sizes while keeping template horizontal scroll & spans -->
+		<style>
+			#main .thumb img {
+				width: 100% !important;
+				height: 100% !important;
+				object-fit: cover !important;
+				object-position: center !important;
+			}
+			#main .thumb {
+				overflow: hidden !important;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -22,7 +35,7 @@
 					</footer>
 				</section>
 
-			<!-- Gallery Items with Required Span Classes -->
+			<!-- Gallery Items with Dynamic Spans -->
 				<section id="main">
 
 					<!-- First Row -->
