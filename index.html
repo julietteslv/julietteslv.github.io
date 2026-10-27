@@ -24,6 +24,20 @@
 				background-color: #1b1b1b !important;
 			}
 		</style>
+		<!-- Force thumbnail cards to remain neat & cropped -->
+		<style>
+			#main article.thumb {
+				width: 300px !important;
+				height: 220px !important;
+				overflow: hidden !important;
+			}
+			#main article.thumb img {
+				width: 100% !important;
+				height: 100% !important;
+				object-fit: cover !important;
+				object-position: center !important;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
