@@ -831,20 +831,16 @@ input, select, textarea {
 				}
 
 		}
-/* --- Custom Portfolio: Larger Thumbnails & Extended Horizontal Scroll --- */
-#main .thumbnails {
-    height: 100vh; /* Keeps the row alignment locked to the viewport height */
-}
-
-#main .thumbnails article {
-    height: 60vh !important; /* Increases the height of every thumbnail box */
-    min-width: 400px !important; /* Makes each card wider so your scrolling distance increases */
+/* --- Custom Portfolio: Larger Cards & Extended Horizontal Scroll --- */
+#main article.thumb {
+    height: 320px !important; /* Increases the card height */
+    min-width: 420px !important; /* Makes each card wider for longer scrolling */
     overflow: hidden !important;
 }
 
-#main .thumbnails article img {
+#main article.thumb img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important; /* Automatically crops/fits any image ratio cleanly */
+    object-fit: cover !important; /* Automatically crops/fits any image ratio */
     object-position: center !important;
 }
