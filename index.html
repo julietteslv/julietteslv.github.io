@@ -24,18 +24,12 @@
 				background-color: #1b1b1b !important;
 			}
 		</style>
-		<!-- Force thumbnail cards to remain neat & cropped -->
+		<!-- Fix image size while keeping horizontal scroll intact -->
 		<style>
-			#main article.thumb {
-				width: 300px !important;
-				height: 220px !important;
-				overflow: hidden !important;
-			}
-			#main article.thumb img {
-				width: 100% !important;
-				height: 100% !important;
-				object-fit: cover !important;
-				object-position: center !important;
+			#main .thumb img {
+				width: auto !important;
+				max-height: 250px !important;
+				object-fit: contain !important;
 			}
 		</style>
 	</head>
