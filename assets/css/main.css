@@ -829,22 +829,20 @@ input, select, textarea {
 				.poptrox-popup .nav-previous {
 					display: none !important;
 				}
-
-		/* --- Custom Portfolio: Controlled Height & Natural Variable Widths --- */
-
-/* 1. Prevent massive raw uploads from breaking the layout */
-#main .thumbnails article img {
-    height: 220px !important;       /* Locks a uniform height so top and bottom align perfectly */
-    width: auto !important;         /* Automatically scales the width to match the image's natural aspect ratio */
-    max-width: none !important;     
-    object-fit: contain !important;
+/* --- Custom Portfolio: Larger Cards & Extended Horizontal Scroll --- */
+#main article.thumb {
+    height: 320px !important; /* Increases the card height */
+    min-width: 420px !important; /* Makes each card wider for longer scrolling */
+    overflow: hidden !important;
 }
 
-/* 2. Ensure the article wrapper wraps nicely around the dynamically scaled image */
-#main .thumbnails article {
-    width: auto !important;
-    height: auto !important;
+#main article.thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Automatically crops/fits any image ratio */
+    object-position: center !important;
 }
+
 			/* --- Custom Background Blur & Overlay --- */
 #bg {
     opacity: 0.4 !important; /* Adjust transparency (0.0 to 1.0) to make it more or less visible */
