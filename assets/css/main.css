@@ -831,16 +831,18 @@ input, select, textarea {
 				}
 
 		}
-/* --- Custom Portfolio: Larger Cards & Extended Horizontal Scroll --- */
+/* --- Custom Portfolio: Varied Widths with Uniform Height & Alignment --- */
+
+/* Force a larger, uniform height for all thumbnail card boxes */
 #main article.thumb {
-    height: 320px !important; /* Increases the card height */
-    min-width: 420px !important; /* Makes each card wider for longer scrolling */
+    height: 340px !important; /* Adjust this height if you want them taller or shorter */
     overflow: hidden !important;
 }
 
+/* Force every image to fill that uniform height while keeping its natural aspect ratio or covering the box */
 #main article.thumb img {
-    width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important; /* Automatically crops/fits any image ratio */
+    width: 100% !important;
+    object-fit: cover !important;
     object-position: center !important;
 }
