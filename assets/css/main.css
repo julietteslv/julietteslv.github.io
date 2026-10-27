@@ -829,19 +829,6 @@ input, select, textarea {
 				.poptrox-popup .nav-previous {
 					display: none !important;
 				}
-/* --- Custom Portfolio: Larger Cards & Extended Horizontal Scroll --- */
-#main article.thumb {
-    height: 320px !important; /* Increases the card height */
-    min-width: 420px !important; /* Makes each card wider for longer scrolling */
-    overflow: hidden !important;
-}
-
-#main article.thumb img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important; /* Automatically crops/fits any image ratio */
-    object-position: center !important;
-}
 /* --- Dynamic Background Image Blur & Dark Overlay --- */
 #bg {
     position: fixed !important;
@@ -858,4 +845,17 @@ input, select, textarea {
 body:before {
     filter: blur(15px) !important;
     -webkit-filter: blur(15px) !important;
+}
+			/* --- Custom Portfolio: Larger Cards & Extended Horizontal Scroll --- */
+#main article.thumb {
+    height: 320px !important; /* Increases the card height */
+    min-width: 420px !important; /* Makes each card wider for longer scrolling */
+    overflow: hidden !important;
+}
+
+#main article.thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Automatically crops/fits any image ratio */
+    object-position: center !important;
 }
