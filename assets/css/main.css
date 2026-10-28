@@ -837,10 +837,22 @@ input, select, textarea {
 #main .item {
     box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25) !important;
 }
+/* --- Custom Portfolio: Larger Cards & Extended Horizontal Scroll --- */
+#main article.thumb {
+    height: 320px !important; /* Increases the card height */
+    min-width: 420px !important; /* Makes each card wider for longer scrolling */
+    overflow: hidden !important;
+}
 
+#main article.thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Automatically crops/fits any image ratio */
+    object-position: center !important;
+}
 /* 2. Style the low-opacity dark title overlays at the bottom of each card */
 #main .item.thumb h2 {
-    background: rgba(252, 156, 66, 0.75) !important;
+    background: rgba(18, 21, 29, 0.75) !important;
     color: #ffffff !important;
 }
 
