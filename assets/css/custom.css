@@ -16,4 +16,4 @@
 /* Home banner background video (sits under the tint overlay and text; banner.jpg stays as fallback) */
 #banner.home-banner { overflow: hidden; }
 #banner.home-banner .banner-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; }
-#banner.home-banner:after { opacity: 0.45; } /* lighter tint so the video shows through; raise for more contrast */
+#banner.home-banner:after { background-color: #38331D; opacity: 0.45; } /* lighter tint so the video shows through; raise for more contrast */
