@@ -837,6 +837,11 @@ input, select, textarea {
 #main .item {
     box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25) !important;
 }
+/* 1. Make the card outlines/borders less opaque and blend into the background */
+#main article {
+    border-color: rgba(255, 255, 255, 0.25) !important; /* Lowers border opacity */
+    box-shadow: none !important;
+}
 /* --- Custom Portfolio: Larger Cards & Extended Horizontal Scroll --- */
 #main article.thumb {
     height: 320px !important; /* Increases the card height */
