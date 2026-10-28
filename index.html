@@ -11,6 +11,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		</style>
+		<!-- Fix background blending and intro panel color -->
+		<style>
+			/* Make the intro text panel blend into the dark background */
+			#main .item.intro {
+				background: transparent !important;
+				color: #ffffff !important;
+				box-shadow: none !important;
+			}
+			#main .item.intro h1, 
+			#main .item.intro p {
+				color: #ffffff !important;
+			}
+			/* Ensure the overall page background matches the theme's dark aesthetic */
+			body, html {
+				background-color: #1b1b1b !important;
+			}
+		</style>
+
 	</head>
 	<body class="is-preload">
 
