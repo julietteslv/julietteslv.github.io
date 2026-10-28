@@ -3950,3 +3950,34 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+/* --- Custom Individual Tile Color Tints --- */
+
+/* Style 1 Tile (First box) */
+section.tiles > article.style1 > span.image {
+    background-color: #4F4410 !important;
+}
+
+/* Style 2 Tile (Second box) */
+section.tiles > article.style2 > span.image {
+    background-color: #373B1E !important;
+}
+
+/* Style 3 Tile (Third box) */
+section.tiles > article.style3 > span.image {
+    background-color: #263814 !important;
+}
+
+/* Style 4 Tile (Fourth box) */
+section.tiles > article.style4 > span.image {
+    background-color: #D1AC62 !important;
+}
+
+/* Style 5 Tile (Fifth box) */
+section.tiles > article.style5 > span.image {
+    background-color: #CC8600 !important;
+}
+
+/* Style 6 Tile (Sixth box) */
+section.tiles > article.style6 > span.image {
+    background-color: #826D46 !important;
+}
