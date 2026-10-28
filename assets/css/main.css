@@ -831,29 +831,21 @@ input, select, textarea {
 				}
 
 		}
-/* --- Custom Portfolio: Larger Cards & Extended Horizontal Scroll --- */
-#main article.thumb {
-    height: 320px !important; /* Increases the card height */
-    min-width: 420px !important; /* Makes each card wider for longer scrolling */
-    overflow: hidden !important;
+/* --- CUSTOM PORTFOLIO POLISH --- */
+
+/* 1. Soften the white outlines so they blend better with the dark background */
+#main .item {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25) !important;
 }
 
-#main article.thumb img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important; /* Automatically crops/fits any image ratio */
-    object-position: center !important;
-}
-/* --- Custom Polish: Soft Borders & Perfect Image Alignment --- */
-
-/* 1. Make the card outlines/borders less opaque and blend into the background */
-#main article {
-    border-color: rgba(255, 255, 255, 0.08) !important; /* Lowers border opacity */
-    box-shadow: none !important;
+/* 2. Style the low-opacity dark title overlays at the bottom of each card */
+#main .item.thumb h2 {
+    background: rgba(18, 21, 29, 0.75) !important;
+    color: #ffffff !important;
 }
 
-/* 2. Ensure images fit their container boxes cleanly with the template's layout */
-#main article img {
+/* 3. Ensure thumbnail images fill the card cleanly */
+#main .item.thumb img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
