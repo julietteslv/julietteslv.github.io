@@ -3950,28 +3950,31 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
-/* --- Custom Color Tints for Forty Template Tiles --- */
+/* --- Direct Forty Tile Tint Overrides --- */
 
-section.tiles > article.style1 {
+article.style1 > span.image img {
+    opacity: 0.3; /* Lowers image opacity so your background color shows through more */
+}
+article.style1 {
     background-color: #4F4410 !important;
 }
 
-section.tiles > article.style2 {
+article.style2 {
     background-color: #373B1E !important;
 }
 
-section.tiles > article.style3 {
+article.style3 {
     background-color: #263814 !important;
 }
 
-section.tiles > article.style4 {
+article.style4 {
     background-color: #D1AC62 !important;
 }
 
-section.tiles > article.style5 {
+article.style5 {
     background-color: #CC8600 !important;
 }
 
-section.tiles > article.style6 {
+article.style6 {
     background-color: #826D46 !important;
 }
