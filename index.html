@@ -42,6 +42,10 @@
 
 				<!-- Banner -->
 					<section id="banner" class="major home-banner">
+						<!-- HOME VIDEO: to swap the background video, replace videos/hero.mp4 (and videos/hero-poster.jpg, the still shown while it loads). If the video can't play, images/banner.jpg is shown instead. -->
+						<video class="banner-video" autoplay muted loop playsinline preload="auto" poster="videos/hero-poster.jpg" onerror="this.remove()">
+							<source src="videos/hero.mp4" type="video/mp4" onerror="this.parentNode.remove()">
+						</video>
 						<div class="inner">
 							<h1 class="home-name">Juliette</h1>
 							<ul class="home-nav">
