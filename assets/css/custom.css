@@ -28,3 +28,16 @@
 #one.tiles > article:before { opacity: 0.65; } /* tile tint strength (template default 0.85) */
 #one.tiles > article:hover:before { opacity: 0; }
 #one.tiles > article header h3, #one.tiles > article header p { text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45); } /* soft shadow for readability */
+
+/* ===== Site background: #1C190F instead of the template's blue ===== */
+/* Main #1C190F; lighter variants #231F18 (header/sections) and #2A261E (alternate sections) */
+body, select option, #main { background-color: #1C190F; }
+#header { background-color: #231F18; }
+.spotlights > section { background-color: #231F18; }
+.spotlights > section:nth-child(2n) { background-color: #2A261E; }
+.spotlights > section > .image:before { background: rgba(28, 25, 15, 0.9); }
+#menu { background: rgba(28, 25, 15, 0.9); }
+body.is-ie #menu { background: rgba(35, 31, 24, 0.975); }
+.tiles article:after { background-color: rgba(28, 25, 15, 0.25); }
+#main > * { border-top-color: rgba(255, 240, 215, 0.1); }
+#about, #research { border-bottom-color: rgba(255, 240, 215, 0.1); }
