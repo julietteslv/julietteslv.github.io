@@ -840,7 +840,7 @@ input, select, textarea {
 
 /* 2. Style the low-opacity dark title overlays at the bottom of each card */
 #main .item.thumb h2 {
-    background: rgba(18, 21, 29, 0.75) !important;
+    background: rgba(252, 156, 66, 0.75) !important;
     color: #ffffff !important;
 }
 
