@@ -29,18 +29,18 @@
 #one.tiles > article:hover:before { opacity: 0; }
 #one.tiles > article header h3, #one.tiles > article header p { text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45); } /* soft shadow for readability */
 
-/* ===== Site background: #0D0802 instead of the template's blue ===== */
-/* Main #0D0802; lighter variants #140E0B (header/sections) and #1B1511 (alternate sections) */
-body, select option, #main { background-color: #0D0802; }
-#header { background-color: #140E0B; }
-.spotlights > section { background-color: #140E0B; }
-.spotlights > section:nth-child(2n) { background-color: #1B1511; }
-.spotlights > section > .image:before { background: rgba(13, 8, 2, 0.9); }
-#menu { background: rgba(13, 8, 2, 0.9); }
-body.is-ie #menu { background: rgba(20, 14, 11, 0.975); }
-.tiles article:after { background-color: rgba(13, 8, 2, 0.25); }
-#main > * { border-top-color: rgba(255, 240, 215, 0.1); }
-#about, #research { border-bottom-color: rgba(255, 240, 215, 0.1); }
+/* ===== Site background: white (#FFFFFF), clean portfolio look ===== */
+/* Main #FFFFFF; very light warm greys #F8F6F2 (header/panels) and #F1EEE8 (alternate sections) */
+body, select option, #main { background-color: #FFFFFF; }
+#header { background-color: #F8F6F2; }
+.spotlights > section { background-color: #F8F6F2; }
+.spotlights > section:nth-child(2n) { background-color: #F1EEE8; }
+.spotlights > section > .image:before { background: rgba(255, 255, 255, 0.9); }
+#menu { background: rgba(255, 255, 255, 0.97); }
+body.is-ie #menu { background: rgba(255, 255, 255, 0.99); }
+.tiles article:after { background-color: rgba(28, 25, 15, 0.25); }
+#main > * { border-top-color: rgba(28, 25, 15, 0.12); }
+#about, #research { border-bottom-color: rgba(28, 25, 15, 0.12); }
 
 /* ===== Accent colour #FF9D00 (replaces template light blue #9bf1ff; hover/active #E08A00) ===== */
 a:hover { color: #FF9D00 !important; }
@@ -97,3 +97,56 @@ input[type="submit"].primary:active,
 #header nav a[href="#menu"]:after { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='32' viewBox='0 0 24 32' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 2px%3B stroke: %23FF9D00%3B %7D%3C/style%3E%3Cline x1='0' y1='11' x2='24' y2='11' /%3E%3Cline x1='0' y1='21' x2='24' y2='21' /%3E%3Cline x1='0' y1='16' x2='24' y2='16' /%3E%3C/svg%3E"); }
 #menu .close:after { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23FF9D00%3B stroke-width: 2%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='20' y2='20' /%3E%3Cline x1='20' y1='0' x2='0' y2='20' /%3E%3C/svg%3E"); }
 
+/* ===== White background: dark readable text ===== */
+body, input, select, textarea { color: #1C190F; font-weight: 400; }
+h1, h2, h3, h4, h5, h6, strong, b, label, #contact h3 { color: #1C190F; }
+header.major > :first-child:after { background-color: #1C190F; }
+hr { border-bottom-color: rgba(28, 25, 15, 0.15); }
+/* Banner and tiles keep white text over the image/video */
+#banner, #banner h1, #banner h2, #banner p, #banner .content { color: #FFFFFF; }
+#banner header.major > :first-child:after { background-color: #FFFFFF; }
+.tiles article, .tiles article h3, .tiles article p, .tiles article a { color: #FFFFFF; }
+.tiles article header.major > :first-child:after { background-color: #FFFFFF; }
+
+/* Header: dark on the light bar; white only while transparent over the banner */
+#header, #header a, #header nav a { color: #1C190F; }
+#header .logo strong { background-color: #1C190F; color: #FFFFFF; }
+#header nav a[href="#menu"]:before { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='32' viewBox='0 0 24 32' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 2px%3B stroke: %231C190F%3B %7D%3C/style%3E%3Cline x1='0' y1='11' x2='24' y2='11' /%3E%3Cline x1='0' y1='21' x2='24' y2='21' /%3E%3Cline x1='0' y1='16' x2='24' y2='16' /%3E%3C/svg%3E"); }
+#header.alt, #header.alt a, #header.alt nav a { color: #FFFFFF; }
+#header.alt .logo strong { background-color: #FFFFFF; color: #1C190F; }
+#header.alt nav a[href="#menu"]:before { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='32' viewBox='0 0 24 32' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 2px%3B stroke: %23FFFFFF%3B %7D%3C/style%3E%3Cline x1='0' y1='11' x2='24' y2='11' /%3E%3Cline x1='0' y1='21' x2='24' y2='21' /%3E%3Cline x1='0' y1='16' x2='24' y2='16' /%3E%3C/svg%3E"); }
+#header .logo:hover strong { background-color: #FF9D00; color: #1C190F; }
+#header .logo:active strong { background-color: #E08A00; }
+
+/* Slide-out menu: light panel, dark text */
+#menu, #menu a, #menu .links a { color: #1C190F; }
+#menu .links li { border-top-color: rgba(28, 25, 15, 0.12); }
+#menu .close:before { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %231C190F%3B stroke-width: 2%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='20' y2='20' /%3E%3Cline x1='20' y1='0' x2='0' y2='20' /%3E%3C/svg%3E"); }
+#menu .close:after { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23B86E00%3B stroke-width: 2%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='20' y2='20' /%3E%3Cline x1='20' y1='0' x2='0' y2='20' /%3E%3C/svg%3E"); }
+
+/* Orange TEXT on white uses darker accessible #B86E00 (#FF9D00 kept for fills/borders) */
+a { border-bottom-color: rgba(28, 25, 15, 0.35); }
+a:hover, #header a:hover, #menu .links a:hover { color: #B86E00 !important; border-bottom-color: transparent; }
+a:active { color: #8F5500 !important; }
+#header.alt a:hover, .tiles article a:hover, #banner a:hover { color: #FF9D00 !important; }
+#header nav a[href="#menu"]:hover:after { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='32' viewBox='0 0 24 32' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 2px%3B stroke: %23B86E00%3B %7D%3C/style%3E%3Cline x1='0' y1='11' x2='24' y2='11' /%3E%3Cline x1='0' y1='21' x2='24' y2='21' /%3E%3Cline x1='0' y1='16' x2='24' y2='16' /%3E%3C/svg%3E"); }
+
+/* Buttons: dark outline at rest; orange border + darker orange text on hover; primary = orange fill */
+input[type="submit"], input[type="reset"], input[type="button"], button, .button { box-shadow: inset 0 0 0 2px #1C190F; color: #1C190F !important; }
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, button:hover, .button:hover { box-shadow: inset 0 0 0 2px #FF9D00; color: #B86E00 !important; }
+input[type="submit"].primary, input[type="reset"].primary, input[type="button"].primary, button.primary, .button.primary { background-color: #1C190F; color: #FFFFFF !important; box-shadow: none; }
+input[type="submit"].primary:hover, input[type="reset"].primary:hover, input[type="button"].primary:hover, button.primary:hover, .button.primary:hover { background-color: #FF9D00; color: #1C190F !important; }
+#banner .button, .tiles .button { box-shadow: inset 0 0 0 2px #FFFFFF; color: #FFFFFF !important; }
+
+/* Forms and contact/footer */
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="search"], input[type="url"], select, textarea { background-color: #F4F2EE; border-color: transparent; color: #1C190F; }
+::placeholder { color: rgba(28, 25, 15, 0.5) !important; }
+input[type="checkbox"] + label:before, input[type="radio"] + label:before { background: #F4F2EE; border-color: rgba(28, 25, 15, 0.3); }
+#contact, #contact > *, #contact > .split > * { border-color: rgba(28, 25, 15, 0.12) !important; }
+.icon.alt:before { background-color: #1C190F; color: #FFFFFF; }
+a.icon.alt:hover:before { background-color: #FF9D00; color: #1C190F; }
+a.icon.alt:active:before { background-color: #E08A00; }
+#contact a { color: #1C190F; }
+#footer { color: rgba(28, 25, 15, 0.6); }
+#footer .copyright, #footer .copyright a { color: rgba(28, 25, 15, 0.55); }
+#footer .copyright li { border-left-color: rgba(28, 25, 15, 0.15); color: rgba(28, 25, 15, 0.6); }
