@@ -184,3 +184,11 @@ a.icon.alt:active:before { background-color: #E08A00; }
   .ar-research-intro { flex-direction: column; gap: 0.5em; }
   .ar-research-intro h2 { flex: none; }
 }
+
+/* ===== No tints (publish): banner, works tiles and About portrait shown untinted ===== */
+#banner.home-banner:after { opacity: 0 !important; }
+#banner.home-banner .home-name, #banner.home-banner .home-nav a { text-shadow: 0 1px 8px rgba(0,0,0,0.55), 0 0 2px rgba(0,0,0,0.35); }
+#one.tiles > article:before { opacity: 0 !important; }
+#one.tiles > article:after { background-color: rgba(0,0,0,0); transition: background-color 0.3s ease; }
+#one.tiles > article:hover:after { background-color: rgba(0,0,0,0.15); }
+.ar-about-image:after { opacity: 0; }
