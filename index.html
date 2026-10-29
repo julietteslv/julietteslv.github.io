@@ -42,10 +42,30 @@
 
 				<!-- Banner -->
 					<section id="banner" class="major home-banner">
-						<!-- HOME VIDEO: to swap the background video, replace videos/hero.mp4 (and videos/hero-poster.jpg, the still shown while it loads). If the video can't play, images/banner.jpg is shown instead. -->
-						<video class="banner-video" autoplay muted loop playsinline preload="auto" poster="videos/hero-poster.jpg" onerror="this.remove()">
-							<source src="videos/hero.mp4" type="video/mp4" onerror="this.parentNode.remove()">
+						<!-- HOME VIDEO: to swap the background video, replace videos/hero.mp4 (and videos/hero-poster.jpg, the still shown while it loads). hero.webm is an optional smaller copy. If the video can't play, the poster image stays visible. -->
+						<video class="banner-video" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="auto" poster="videos/hero-poster.jpg">
+							<source src="videos/hero.mp4" type="video/mp4">
+							<source src="videos/hero.webm" type="video/webm">
 						</video>
+						<script>
+							/* Keep the banner video playing: force muted (needed for autoplay), retry play() on load,
+							   when the tab becomes visible again, and on the first tap/scroll. If it still can't play
+							   (e.g. iPhone Low Power Mode), the poster image simply stays visible. */
+							(function () {
+								var v = document.querySelector('.banner-video');
+								if (!v) return;
+								v.muted = true; v.defaultMuted = true; v.setAttribute('muted', '');
+								function tryPlay() { if (v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } }
+								['loadedmetadata', 'canplay'].forEach(function (e) { v.addEventListener(e, tryPlay); });
+								window.addEventListener('load', tryPlay);
+								window.addEventListener('pageshow', tryPlay);
+								document.addEventListener('visibilitychange', function () { if (!document.hidden) tryPlay(); });
+								['touchstart', 'click', 'scroll', 'keydown'].forEach(function (e) {
+									window.addEventListener(e, tryPlay, { once: true, passive: true });
+								});
+								tryPlay();
+							})();
+						</script>
 						<div class="inner">
 							<h1 class="home-name">Juliette</h1>
 							<ul class="home-nav">
