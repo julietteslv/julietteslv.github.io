@@ -150,3 +150,60 @@ a.icon.alt:active:before { background-color: #E08A00; }
 #footer { color: rgba(28, 25, 15, 0.6); }
 #footer .copyright, #footer .copyright a { color: rgba(28, 25, 15, 0.55); }
 #footer .copyright li { border-left-color: rgba(28, 25, 15, 0.15); color: rgba(28, 25, 15, 0.6); }
+
+/* ===== No tints: banner video and works tiles shown in their true colours ===== */
+#banner.home-banner:after { opacity: 0 !important; }
+#banner.home-banner .home-name, #banner.home-banner .home-nav a { text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55), 0 0 2px rgba(0, 0, 0, 0.35); }
+#one.tiles > article:before { opacity: 0 !important; }
+#one.tiles > article:after { background-color: rgba(0, 0, 0, 0); transition: background-color 0.3s ease; }
+#one.tiles > article:hover:after { background-color: rgba(0, 0, 0, 0.15); } /* gentle darken on hover so it still reacts */
+#one.tiles > article header h3, #one.tiles > article header p { text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6), 0 0 2px rgba(0, 0, 0, 0.4); }
+
+/* ===== About + Research: clean editorial layout (Helvetica, regular weight, generous white space) ===== */
+.ar-about, .ar-research { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #1C190F; }
+.ar-about h2, .ar-about h3, .ar-research h2, .ar-research h3 { font-family: inherit; font-weight: 400; letter-spacing: 0; text-transform: none; color: #1C190F; margin: 0 0 0.6em 0; }
+.ar-about p, .ar-research p { font-family: inherit; font-size: 16px; line-height: 1.45; font-weight: 400; margin: 0 0 1em 0; color: #3a372e; }
+.ar-about strong, .ar-research strong { color: #1C190F; }
+#about.ar-about, #research.ar-research { padding: 0; border-bottom: 0; }
+
+/* About: image flush left (~48%), text column right */
+.ar-about { display: flex; align-items: stretch; min-height: 620px; }
+.ar-about-image { flex: 0 0 48%; margin: 0; }
+.ar-about-image img { display: block; width: 100%; height: 100%; max-height: 900px; object-fit: cover; }
+.ar-about-text { flex: 1; padding: 64px 3em 64px 40px; max-width: 640px; }
+.ar-about-text h2 { font-size: 24px; margin-bottom: 2.6em; }
+
+/* Research: big two-line-ish title left, intro right */
+.ar-research { padding: 80px 25px 60px 25px !important; }
+.ar-research-intro { display: flex; gap: 2em; margin-bottom: 70px; }
+.ar-research-intro h2 { flex: 0 0 200px; font-size: 32px; line-height: 1.1; }
+.ar-research-intro > div { flex: 1; max-width: 980px; }
+.ar-research-intro p { font-size: 14px; }
+
+/* One row per piece: text left, media row right */
+.ar-entry { display: flex; gap: 2em; margin-bottom: 70px; }
+.ar-entry-text { flex: 0 0 180px; display: flex; flex-direction: column; }
+.ar-entry-text h3 { font-size: 24px; }
+.ar-entry-text p { font-size: 14px; }
+.ar-entry-text .ar-date { font-style: italic; }
+.ar-entry-media { flex: 1; display: flex; gap: 12px; overflow-x: auto; }
+.ar-entry-media > * { flex: 0 0 auto; width: 280px; margin: 0; }
+.ar-video video { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #F1EEE8; }
+.ar-slot { aspect-ratio: 4 / 5; background: #F1EEE8; display: flex; align-items: center; justify-content: center; }
+.ar-slot span, .ar-research figcaption { font-size: 12px; color: #6b675c; letter-spacing: 0; text-transform: none; }
+.ar-research figcaption { margin-top: 6px; }
+
+/* Large featured video */
+.ar-feature { max-width: 1080px; margin: 20px auto 40px auto; }
+.ar-feature video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #F1EEE8; }
+
+@media screen and (max-width: 736px) {
+  .ar-about { flex-direction: column; min-height: 0; }
+  .ar-about-image img { height: auto; max-height: 520px; }
+  .ar-about-text { padding: 36px 1.25em; }
+  .ar-about-text h2 { margin-bottom: 1.2em; }
+  .ar-research { padding: 50px 1.25em 30px 1.25em !important; }
+  .ar-research-intro, .ar-entry { flex-direction: column; gap: 0.5em; }
+  .ar-research-intro h2, .ar-entry-text { flex: none; }
+  .ar-entry-media > * { width: 70vw; }
+}
