@@ -192,3 +192,8 @@ a.icon.alt:active:before { background-color: #E08A00; }
 #one.tiles > article:after { background-color: rgba(0,0,0,0); transition: background-color 0.3s ease; }
 #one.tiles > article:hover:after { background-color: rgba(0,0,0,0.15); }
 .ar-about-image:after { opacity: 0; }
+
+/* ===== Neutral dark shade (black ~38%): over banner video and works tiles; tiles clear on hover ===== */
+body #banner.home-banner:after { background-color: #000; opacity: 0.38 !important; }
+body #one.tiles > article:after { background-color: rgba(0,0,0,0.38); opacity: 1; transition: background-color 0.3s ease; }
+body #one.tiles > article:hover:after { background-color: rgba(0,0,0,0); }
