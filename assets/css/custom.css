@@ -209,3 +209,30 @@ body #one.tiles > article:after {
 }
 body #one.tiles > article:hover:after { background-color: #000; opacity: 0; }
 body #one.tiles > article:before { transition: none; }  /* hidden template tint layer: don't animate it */
+
+/* ===== Work detail page (work1.html) – Kate Tucker-style: images left, text right ===== */
+body.work-page, body.work-page #wrapper, body.work-page #main { background: #fff; }
+body.work-page { color: #444; }
+body.work-page #footer { background: #fff; }
+body.work-page #footer .copyright, body.work-page #footer a { color: #888; }
+.work-detail {
+	display: flex; align-items: flex-start; gap: 6em;
+	max-width: 1300px; margin: 0 auto; padding: 8em 4em 6em;
+}
+.work-images { flex: 1 1 62%; display: flex; flex-direction: column; gap: 6em; }
+.work-images figure { margin: 0; }
+.work-images img { display: block; max-width: 100%; max-height: 85vh; height: auto; margin: 0 auto; }
+.work-images figcaption { margin-top: 0.8em; font-size: 0.75em; letter-spacing: 0.1em; text-transform: uppercase; color: #888; text-align: center; }
+.work-text { flex: 0 0 30%; position: sticky; top: 7em; }
+.work-text h1 { color: #222; font-size: 1.6em; letter-spacing: 0.2em; text-transform: uppercase; margin: 0.6em 0 0.4em; border: 0; }
+.work-text .work-meta { font-size: 0.8em; color: #888; letter-spacing: 0.05em; }
+.work-text p { color: #555; font-size: 0.95em; }
+.work-text .work-back { font-size: 0.75em; letter-spacing: 0.15em; text-transform: uppercase; color: #888; border-bottom: 0; }
+.work-text .work-back:hover { color: #222; }
+@media screen and (max-width: 980px) { .work-detail { gap: 3em; padding: 6em 2em 4em; } }
+@media screen and (max-width: 736px) {
+	.work-detail { flex-direction: column; padding: 5em 1.5em 3em; gap: 2em; }
+	.work-text { order: -1; position: static; flex-basis: auto; }
+	.work-images { gap: 2.5em; }
+	.work-images img { max-height: none; }
+}
