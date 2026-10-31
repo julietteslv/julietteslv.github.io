@@ -62,6 +62,43 @@
 							</aside>
 
 						</section>
+
+						<!-- Related works: sideways-scrolling row of the other works (same hover as the home page Works tiles) -->
+						<section class="related-works">
+							<div class="related-head">
+								<h2>Related works</h2>
+								<a href="works.html" class="see-all">See all works <span class="see-arrow">&rarr;</span></a>
+								<div class="related-arrows">
+									<button type="button" class="related-prev" aria-label="Scroll left">&larr;</button>
+									<button type="button" class="related-next" aria-label="Scroll right">&rarr;</button>
+								</div>
+							</div>
+							<div class="related-scroll">
+								<!-- Related works: each <article> ... </article> block is one tile.
+								     To add a tile, copy a whole block and change the image, link and title.
+								     To remove a tile, delete its whole block. -->
+								<section class="tiles related-tiles">
+									<article>
+										<span class="image">
+											<img src="images/pic04.jpg" alt="" />
+										</span>
+										<header class="major">
+											<h3><a href="work4.html" class="link">"Untitled"</a></h3>
+											<p>Nisl sed aliquam</p>
+										</header>
+									</article>
+									<article>
+										<span class="image">
+											<img src="images/pic05.jpg" alt="" />
+										</span>
+										<header class="major">
+											<h3><a href="work5.html" class="link">"Untitled"</a></h3>
+											<p>Ipsum dolor sit amet</p>
+										</header>
+									</article>
+								</section>
+							</div>
+						</section>
 					</div>
 
 				<!-- Footer -->
@@ -83,6 +120,17 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// Related works arrows: scroll the row by about one tile
+				$('.related-works').each(function() {
+					var $row = $(this).find('.related-scroll'), $arrows = $(this).find('.related-arrows');
+					// hide the arrows when all tiles already fit
+					function checkArrows() { $arrows.toggleClass("is-hidden", $row[0].scrollWidth <= $row[0].clientWidth + 1); }
+					checkArrows(); $(window).on('resize load', checkArrows);
+					$(this).find('.related-prev').on('click', function() { $row[0].scrollBy({ left: -$row.width() * 0.8, behavior: 'smooth' }); });
+					$(this).find('.related-next').on('click', function() { $row[0].scrollBy({ left: $row.width() * 0.8, behavior: 'smooth' }); });
+				});
+			</script>
 
 	</body>
 </html>
