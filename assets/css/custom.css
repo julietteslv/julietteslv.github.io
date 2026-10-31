@@ -246,9 +246,9 @@ body.work-page #footer .copyright, body.work-page #footer a { color: #888; }
 .related-arrows.is-hidden { display: none; }
 .related-scroll { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: thin; padding-bottom: 0.75em; }
 .tiles.related-tiles { display: flex; flex-wrap: nowrap; gap: 4px; justify-content: flex-start; border: 0; } /* thin 4px gaps between tiles */
-.tiles.related-tiles > article { flex: 0 0 15em; width: 15em !important; height: 8.5em; min-height: 0; padding: 1em 1.25em; scroll-snap-align: start; }
-.tiles.related-tiles > article header h3 { font-size: 1.1em; margin-bottom: 0.3em; }
-.tiles.related-tiles > article header p { font-size: 0.6em; margin: 0; }
+.tiles.related-tiles > article { flex: 0 0 27.5em; width: 27.5em !important; height: 16em; min-height: 0; padding: 2em 2.25em; scroll-snap-align: start; }
+.tiles.related-tiles > article header h3 { font-size: 1.5em; margin-bottom: 0.3em; }
+.tiles.related-tiles > article header p { font-size: 0.75em; margin: 0; }
 .tiles.related-tiles > article header.major > :first-child:after { margin-top: 0.4em; margin-bottom: 0.4em; }
 /* Same shade + smooth fade as the home page tiles */
 .tiles.related-tiles > article:before { opacity: 0 !important; transition: none; }
@@ -264,8 +264,10 @@ body.work-page #footer .copyright, body.work-page #footer a { color: #888; }
 .tiles.related-tiles > article header h3, .tiles.related-tiles > article header p { text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45); }
 @media screen and (max-width: 736px) {
 	.related-works { padding: 1em 1.5em 3em; }
-	.tiles.related-tiles > article { flex-basis: 45vw; width: 45vw !important; height: 7em; padding: 0.75em 0.9em; }
+	.tiles.related-tiles > article { flex-basis: 80vw; width: 80vw !important; height: 13em; padding: 1.25em 1.5em; }
 	.related-arrows { display: none; }
+	.related-head h2 { white-space: nowrap; font-size: 0.85em; }
+	.related-head .see-all { font-size: 0.85em; margin-left: 1em; }
 }
 
 /* ===== "See all works" / "See more" links and Works page ===== */
