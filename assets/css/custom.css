@@ -283,3 +283,36 @@ body.work-page .all-works-head { padding: 7em 4em 2em; }
 	.see-more-row { padding: 1em 1.5em 2em; }
 	body.work-page .all-works-head { padding: 5em 1.5em 1.5em; }
 }
+
+/* ===== The Research: three image tiles (no text), same shade + smooth fade as the Works tiles ===== */
+.tiles.research-tiles { display: flex; flex-wrap: nowrap; gap: 4px; max-width: 1100px; margin: 2.5em auto 0; border: 0; }
+/* Same width and side margins as the gesture video on the research pages */
+.tiles.research-tiles { max-width: none; width: 97vw; margin-left: calc(50% - 48.5vw); margin-right: 0; }
+.tiles.research-tiles > article { display: flex; align-items: center; justify-content: center; text-align: center; }
+.tiles.research-tiles > article header.major { position: relative; z-index: 3; margin: 0; }
+.tiles.research-tiles > article header.major h3 { margin: 0; }
+/* 16:9, same as the gesture videos (image is cropped to fill, like object-fit: cover) */
+.tiles.research-tiles > article { flex: 1 1 0; width: auto !important; height: auto !important; aspect-ratio: 16 / 9; min-height: 0; padding: 0; background-size: cover; background-position: center; }
+.tiles.research-tiles > article:before { opacity: 0 !important; transition: none; }
+.tiles.research-tiles > article:after {
+  background-color: #000;
+  opacity: 0.38;
+  transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+.tiles.research-tiles > article:hover:after { background-color: #000; opacity: 0; }
+/* Research pages: images 16:9 like the videos */
+.research-page .work-images img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+/* Research pages: gesture video as a full-width "finale" */
+.research-finale { margin: 6em 0 4em; padding: 0 1.5vw; }
+.research-finale video { display: block; width: min(97vw, calc(92vh * 16 / 9)); aspect-ratio: 16 / 9; margin: 0 auto; background: #000; object-fit: contain; }
+@media screen and (max-width: 736px) {
+	.tiles.research-tiles { margin-top: 1.5em; }
+	.tiles.research-tiles > article { height: auto !important; }
+	.tiles.research-tiles { width: 100vw; margin-left: calc(50% - 50vw); gap: 3px; }
+	.tiles.research-tiles > article header.major h3 { font-size: 0.75em; }
+	.research-finale { margin: 3em 0 2.5em; padding: 0; }
+	.research-finale video { width: 100vw; }
+}
