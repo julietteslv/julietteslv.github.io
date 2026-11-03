@@ -316,3 +316,9 @@ body.work-page .all-works-head { padding: 7em 4em 2em; }
 	.research-finale { margin: 3em 0 2.5em; padding: 0; }
 	.research-finale video { width: 100vw; }
 }
+
+/* ===== Typography consistency: page text and headings match the home page ===== */
+.work-text p { color: #1C190F; font-size: 1em; }
+.work-text h1, .all-works-head h1, .related-head h2 { color: #1C190F; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.work-text h1, .all-works-head h1 { font-size: 1.75em; line-height: 1.15; }
+.related-head h2 { font-size: 1.2em; }
